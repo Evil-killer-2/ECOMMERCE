@@ -1,0 +1,348 @@
+/* Navbar */
+.navbar-nav .nav-link {
+    color: #fff;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+  }
+  
+  /* Brand logo spacing fix */
+  .navbar-brand {
+    margin-left: -10px;
+    font-weight: bold;
+  }
+  
+  /* Search bar */
+  .search-bar {
+    position: relative;
+    display: none;
+  }
+  .search-bar.active {
+    display: block;
+  }
+  .search-bar input {
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Search results dropdown */
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .search-results div {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  .search-results div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Icons */
+  .icon-link i {
+    font-size: 1.4rem;
+    color: white;
+  }
+  .icon-link:hover i {
+    color: #0d6efd;
+  }
+  
+  /* Dropdown on hover */
+  .hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  .dropdown-menu {
+    margin-top: 0;
+  }
+/* Hero Section */
+.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  padding: 0 1rem;
+}
+
+/* Optional: add overlay for better text visibility */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+.hero-section .btn {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/* Hero Slide Shared Styles */
+.hero-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Overlay (optional, for readability) */
+  .hero-slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero-slide .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Headline and Subheadline */
+  .hero-slide h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-slide p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* CTA Button */
+  .hero-slide .btn {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+/* Custom background images for each slide */
+.hero-bg-1 {
+    background-image: url('images/slide1.jpg'); /* Replace with your own path */
+  }
+  
+  .hero-bg-2 {
+    background-image: url('images/slide2.jpg'); /* Replace with your own path */
+  }
+  
+  .hero-bg-3 {
+    background-image: url('images/slide3.jpg'); /* Replace with your own path */
+  }
+  
+  /* Shared hero styles */
+  .hero-slide {
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    z-index: 1;
+  }
+  
+  .hero-slide .container {
+    position: relative;
+    z-index: 2;
+  }
+/* Category Section */
+.category-section h2 {
+    font-size: 2.5rem;
+    color: #222;
+  }
+  
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .category-card img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  /* Hover Overlay */
+  .category-card .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .category-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .category-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .category-card .overlay i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .category-card .overlay span {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+/* Best Deals Section */
+.best-deals-section {
+    background-color: #111; /* Dark background for contrast */
+  }
+  
+  .best-deals-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  /* Deal Card - Brighter Image & Hover Effect */
+.deal-card {
+    height: 300px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(1.2); /* Brighter by default */
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .deal-card:hover {
+    transform: scale(1.03);
+    filter: brightness(1.4); /* Even brighter on hover */
+  }
+  
+  /* Overlay (darker text area stays clean & visible) */
+  .deal-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0.2));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+  }
+  
+  /* Deal Text */
+  .deal-overlay h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  .deal-overlay p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffdd57; /* gold-ish highlight */
+  }
+  /* Product Card Styles */
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .product-card .card-body {
+    padding: 1rem;
+  }
+  
+  .product-card .price {
+    color: #28a745;
+    font-size: 1.1rem;
+  }
+  /* Newsletter Section */
+.newsletter-section {
+    background-image: url('images/newsletter-background\ \(1\).jpg'); /* Add your own image here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+  }
+  
+  .newsletter-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .newsletter-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .newsletter-section h2 {
+    font-size: 2rem;
+  }
+  
+  .newsletter-section .form-control {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+  }
+  
+  .newsletter-section .btn {
+    padding: 0.75rem;
+  }
+  .feature-box i {
+    color: #0d6efd;
+  }
+  
+  .feature-box h5 {
+    font-weight: 600;
+  }
+  
